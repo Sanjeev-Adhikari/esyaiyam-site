@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce Site</title>
+
+         <!--The link of Fontawsome-->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <!--The link of style sheet-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+
+
+    <body>
+
+        <div class="preloader">
+            <div class="spinner">
+                <span class="loading-text">Cara</span>
+            </div>
+        </div>
+          
+
+        <!--Here I have used the section tag for making the code transparent & readable-->
+
+        <!--header contains the logo & nav links for large screen and logo and hamburger menu with shop link-->
+        <section id="header"> 
+
+           <!--First goes the logo-->
+            <a href="#"><img src="/img/logo.png" class="logo" alt="logo"></a>
+
+
+           <!--then the navlinks-->
+
+            <div>
+                <ul id="navbar">
+                    <!--making home page active-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a class="active"href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="cart.html"><i class="far fa-shopping-bag" id="lg-bag"></i></a></li>    
+                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                </ul>
+
+            </div>
+
+            <!-- here is the code for hamburger menu-->
+
+            <div id="mobile">
+                
+                <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </section>
+
+        <!--hero contains text in h4, h2, h1, p and also a button-->
+        <section id="page-header" class="blog-header"> 
+            
+            <h2>#Readmore</h2>
+            
+            <p>Read all case studies about our products! </p>
+            
+        </section>
+
+        <section id="blog">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="/img/blog/b1.jpg">
+                </div>
+                <div class="blog-details">
+                    <h4>The Cotton-Jersey Zip-up Hoodies</h4>
+                    <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies wolf thartreuse hexagon irony. godard...</p>
+                    <a href="#">Continue Reading</a>
+
+                </div>
+                <h1>13/01</h1>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="/img/blog/b2.jpg">
+                </div>
+                <div class="blog-details">
+                    <h4>How to Style a Quiff</h4>
+                    <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies wolf thartreuse hexagon irony. godard...</p>
+                    <a href="#">Continue Reading</a>
+
+                </div>
+                <h1>13/04</h1>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="/img/blog/b3.jpg">
+                </div>
+                <div class="blog-details">
+                    <h4>Runway inspired trends</h4>
+                    <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies wolf thartreuse hexagon irony. godard...</p>
+                    <a href="#">Continue Reading</a>
+
+                </div>
+                <h1>16/05</h1>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="/img/blog/b4.jpg">
+                </div>
+                <div class="blog-details">
+                    <h4>The Cotton-Jersey Zip-up Hoodies</h4>
+                    <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies wolf thartreuse hexagon irony. godard...</p>
+                    <a href="#">Continue Reading</a>
+
+                </div>
+                <h1>17/01</h1>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="/img/blog/b6.jpg">
+                </div>
+                <div class="blog-details">
+                    <h4>understanding the fashion!</h4>
+                    <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies wolf thartreuse hexagon irony. godard...</p>
+                    <a href="#">Continue Reading</a>
+
+                </div>
+                <h1>19/09</h1>
+            </div>
+        </section>
+
+        <section id="pagination" class="section-p1">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+        </section>
+
+         <!--newsletter contains some newstext in h4 & p and also a form with input and a button-->
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign Up For Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">sign up</button>
+            </div>
+        </section>
+
+         <!--footer contains the logo, contact details, follow us links, two columns(about and Myaccount), download option icons, payment method picture, and a copyright section  -->
+         <!--Here four columns are made and each contains the respective items-->
+        <footer class="section-p1">
+             <!--This col contains logo, contact details,  and follow us links -->
+            <div class="col">
+                <img src="/img/logo.png" class="logo">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>Kathmandu,Old Baneshwor,Nepal</p>
+                <p><strong>Phone: </strong>+977 9840955770</p>
+                <p><strong>Hours: </strong> 10:00 AM -6.00 PM, Mon-Sat</p>
+                <div class="follow">
+                    <h2>Follow us</h2>
+                    <div class="icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--This col contains the About us links-->
+            <div class="col">
+                <h4>About </h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact us</a>
+            </div>
+
+            
+             <!--This col contains My Accounts links-->
+            <div class="col">
+                <h4>My Account </h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+
+             <!--This col contains the install option images and payment picture-->
+            <div class="col install">
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="/img/pay/app.jpg">
+                    <img src="/img/pay/play.jpg">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="/img/pay/pay.png">
+            </div>
+
+
+             <!--This col contains the copyright information-->
+            <div class="copyright">
+                <p>&copy; Copyright @ Sanjeev. Developed by <span>Sanjeev Adhikari</span>.</p>
+
+            </div>
+
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+        <!--The link of script file-->
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce Site</title>
+
+         <!--The link of Fontawsome-->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <!--The link of style sheet-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+
+
+    <body>
+
+        <div class="preloader">
+            <div class="spinner">
+                <span class="loading-text">Cara</span>
+            </div>
+        </div>
+          
+
+        <!--Here I have used the section tag for making the code transparent & readable-->
+
+        <!--header contains the logo & nav links for large screen and logo and hamburger menu with shop link-->
+        <section id="header"> 
+
+           <!--First goes the logo-->
+            <a href="#"><img src="/img/logo.png" class="logo" alt="logo"></a>
+
+
+           <!--then the navlinks-->
+
+            <div>
+                <ul id="navbar">
+                    <!--making home page active-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active"  href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="cart.html"><i class="far fa-shopping-bag" id="lg-bag"></i></a></li>    
+                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                </ul>
+
+            </div>
+
+            <!-- here is the code for hamburger menu-->
+
+            <div id="mobile">
+                
+                <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </section>
+
+        <section id="prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="img/products/f1.jpg" width="100%" id="MainImg" alt="mainimg">
+
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="img/products/f1.jpg" width="100%" class="small-img" alt="mainimg">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/products/f2.jpg" width="100%" class="small-img" alt="mainimg">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/products/f3.jpg" width="100%" class="small-img" alt="mainimg">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/products/f4.jpg" width="100%" class="small-img" alt="mainimg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-pro-details">
+                <h6>Home / T-shirt</h6>
+                <h4>Men's Fashion T Shirts</h4>
+                <h3>$89</h3>
+                <select>
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>Small</option>
+                    <option>Large</option>
+                </select>
+                <input type="number" value="1">
+                <button class="normal">Add To Cart</button>
+                <h4>Product Details</h4>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos, molestiae quidem corporis ipsa voluptates blanditiis magni pariatur, porro nesciunt animi atque at, sint fuga debitis laborum dolores perspiciatis minima.</span>
+            </div>
+        </section>
+
+        <section id="product1" class="section-p1">
+            <h2>Featured Products</h2>
+            <p>Summer Collection New Mordern Designs</p>
+            <div class="pro-container">
+
+                <!--code for making the product card-->
+                <div class="pro">
+                    <img src="/img/products/n1.jpg" alt="pro1">
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronaut T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+
+                </div>
+
+                <div class="pro">
+                    <img src="/img/products/n2.jpg" alt="pro1">
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronaut T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+
+                </div>
+                <div class="pro">
+                    <img src="/img/products/n3.jpg" alt="pro1">
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronaut T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+
+                </div>
+                <div class="pro">
+                    <img src="/img/products/n4.jpg" alt="pro1">
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronaut T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+
+                </div>
+            </div>
+        </section>
+
+         <!--newsletter contains some newstext in h4 & p and also a form with input and a button-->
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign Up For Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">sign up</button>
+            </div>
+        </section>
+
+         <!--footer contains the logo, contact details, follow us links, two columns(about and Myaccount), download option icons, payment method picture, and a copyright section  -->
+         <!--Here four columns are made and each contains the respective items-->
+        <footer class="section-p1">
+             <!--This col contains logo, contact details,  and follow us links -->
+            <div class="col">
+                <img src="/img/logo.png" class="logo">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>Kathmandu,Old Baneshwor,Nepal</p>
+                <p><strong>Phone: </strong>+977 9840955770</p>
+                <p><strong>Hours: </strong> 10:00 AM -6.00 PM, Mon-Sat</p>
+                <div class="follow">
+                    <h2>Follow us</h2>
+                    <div class="icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--This col contains the About us links-->
+            <div class="col">
+                <h4>About </h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact us</a>
+            </div>
+
+            
+             <!--This col contains My Accounts links-->
+            <div class="col">
+                <h4>My Account </h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+
+             <!--This col contains the install option images and payment picture-->
+            <div class="col install">
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="/img/pay/app.jpg">
+                    <img src="/img/pay/play.jpg">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="/img/pay/pay.png">
+            </div>
+
+
+             <!--This col contains the copyright information-->
+            <div class="copyright">
+                <p>&copy; Copyright @ Sanjeev. Developed by <span>Sanjeev Adhikari</span>.</p>
+
+            </div>
+
+        </footer>
+
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var smallimg = document.getElementsByClassName("small-img");
+
+            smallimg[0].onclick = function(){
+                MainImg.src = smallimg[0].src;
+            }
+
+            smallimg[1].onclick = function(){
+                MainImg.src = smallimg[1].src;
+            }
+
+            smallimg[2].onclick = function(){
+                MainImg.src = smallimg[2].src;
+            }
+
+            smallimg[3].onclick = function(){
+                MainImg.src = smallimg[3].src;
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+        <!--The link of script file-->
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,1651 @@
+
+/*Importing the google fonts into our website*/
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*applying these property to all the page for removing the extra spaces provided by default*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  outline: 0;
+  
+}
+
+/*Providing the smooth scrooling for the whole page*/
+html {
+  scroll-behavior: smooth;
+  transition: 0.3s ease;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  z-index: 9999;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 4px solid #333;
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+
+.loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+/* Global Styles */
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+/*this is the global padding for sections*/
+.section-p1 {
+  padding: 40px 80px;
+}
+
+/*this is the global margin for sections*/
+.section-m1 {
+  margin: 40px 0;
+}
+
+/*this is the global style for button with normal class*/
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+/*this is the global style for button with white class*/
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 0.2s;
+}
+
+/*giving full width to the body*/
+body {
+  width: 100%;
+}
+
+
+/*header*/
+/*displaying the logo and the nav links side by side and providing a background color to the header with box-shadow*/
+ #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #E3E6F3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+
+  /*making the box-shadow display and also making the navbar sticky*/
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+ }
+ 
+
+ /* displaying the menu items side in a single row and positioning them in the center*/
+ #navbar {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ /*removing the bullets and providing the top bottom=>0 and left right=>20px padding.*/
+ /*position relative is used for providing a new positioning context for the later child element to place the underline*/
+ #navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+ }
+
+ /*removing the underline from the text and changing its color. also increased the size and weight of the text*/
+ #navbar li a {
+
+  text-decoration:none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+ 
+/*adding the hover effect on the nav links and making the home page active*/
+  #navbar li a:hover,
+  #navbar li a.active {
+    color:#088178;
+  }
+
+/*making an underline below the active link using psuedo classes acfter and before*/
+/*this is a child class and here i have added position absolute to place the underline 40px in the right from the parent element*/
+  #navbar li a.active::after,
+  #navbar li a:hover::after
+    {
+    content:"";
+    width: 30%;
+    height: 2px;
+    background:#088178;
+    position: absolute;
+    bottom: -4px;
+    right: 40px;
+  }
+
+
+  /*home page style*/
+
+  #hero {
+    background-image: url("/img/hero4.png"); /*first image takes only the size of the text inside the hero section*/
+    height: 90vh; /*now the height of 90vh is applied*/
+    width: 100%;
+    background-size: cover; 
+    background-position: top 27% right 0; /*providing the position for thebackground image*/
+    padding:0 80px;
+
+    /*making the text inside the section display in center in a column using the flex-direction*/
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: center;
+
+  }
+
+  #hero h4 {
+    padding-bottom: 15px;
+  }
+
+  #hero h1 {
+    color: #088178;
+  }
+
+  /*adding the background image in the button and making the button's background color to be transparent so that the image is visible and added color to the button text*/
+  #hero button {
+    background-image: url("/img/button.png");
+    background-color: transparent;
+    color: #088178;
+
+    /*removing the border width of the button*/
+    border: 0;
+
+    /*fixing the image of the button using padding*/
+    padding: 14px 80px 14px 65px;
+
+    /*no any repeat of image*/
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    /*button text size and width*/
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/*feature*/
+/*making the first card or box*/
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+
+}
+
+/*applying hover on the card*/
+#feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+/*making the text below the card display in inline block and providing a background to it*/
+#feature .fe-box h6{
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #fddde4;
+
+
+}
+
+/*making the mage responsive and adding the margin-bottom*/
+#feature .fe-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+ /*aligning the cards in a single row*/
+#feature {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+/*making the different colors for different h6 childs */
+
+#feature .fe-box:nth-child(2) h6 {
+  background-color: #cdebbc;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+  background-color: #d1e8f2;
+}
+#feature .fe-box:nth-child(4) h6 {
+  background-color: #cdd4f8;
+}
+#feature .fe-box:nth-child(5) h6 {
+  background-color: #f6dbf6;
+}
+#feature .fe-box:nth-child(6) h6 {
+  background-color: #fff2e5;
+}
+
+
+/*products*/
+
+/*placing the text in the center*/
+#product1 {
+  text-align: center;
+}
+
+/*giving the card a width and then a min width is set for ensuring that 
+the width of card is never less than 250
+border is given to make it look like a card, position relative is used 
+to give the pro classes a positioning context respect to the product element*/ 
+#product1 .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+  margin:15px 0;
+  transition: 0.2s ease;                              
+  position: relative;
+  border-radius: 25px;
+}
+
+/*applying hover*/
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+/*setting the image inside the card*/
+#product1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+
+}
+
+/*stylying the description area inside the card*/
+#product1 .pro .des {
+  text-align: start; /*aligning all the text in the start*/
+  padding: 10px 0;
+}
+
+/*stylying the span, h5, image of stars, and h4 inside the card*/
+#product1 .pro .des span {
+  color: #606063;
+  font-size: 12px;
+}
+
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4 {
+  padding-top:7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+
+/*making square shape outside the cart mage with width and height
+-making the cart image in center using line-height
+-making the square shape in circle using border-radius
+-positioning the cart image side by side with the h4 and stars using 
+bottom and right and position absolute
+*/
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius:50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  bottom:20px;
+  right: 10px;
+  position: absolute;
+  
+}
+
+/*displaying the products in two columns using flex and flex-wrap property 
+flexbox layout and providing space between them using the space between property*/
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+
+}
+
+/* displaying the banner items (texts and button) in a column using
+flex-direction and positioning everything in center using justify content,
+also placing the background image of size cover and poisition center*/
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image: url("/img/banner/b2.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover; /*image covers the entire background area of the  elemnent*/
+  background-position: center; /*sets position to center*/
+}
+
+/*styling the text and button inside the banner*/
+#banner h4 {
+  color: #fff;
+  font-size: 16px;
+}
+
+#banner h2 {
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+}
+ 
+#banner h2 span{
+  color: #ef3636;
+}
+
+#banner button:hover {
+  background-color: #088178;
+  color: #fff;
+
+}
+
+
+/*displsying the banners side by side and keeping contents side by side using
+space between property and providing the remaining space evenly to both banners.
+and wrapping the banners to go in another line if not fit there(used for responsiveness)*/
+#sm-banner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+/*displaying the text and button inside the banner in columns and setting them
+in the axis of columns using justify-content:center, using flex-start to start the items 
+from the start of the column axis, also placing the background image of size cover 
+and poisition center*/
+#sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("/img/banner/b17.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  transition: 0.10s ease;
+}
+
+/*here banner-box2 class is written after the banner-box class due to which 
+other styles are completely same for the this second banner but a change is
+the background image*/
+#sm-banner .banner-box2 {
+  background-image: url("/img/banner/b10.jpg");
+}
+
+
+/*styling the text and button inside the banner*/
+#sm-banner h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h4 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+#sm-banner span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+  background-color: #088178;
+  
+}
+
+/*displaying the text and button inside the banner in columns and setting them
+in the axis of columns using justify-content:center, using flex-start to start the items 
+from the start of the column axis, also placing the background image of size cover 
+and poisition center, ensuring that minimum width of 30% is always taken using min-width*/
+#banner3 .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("/img/banner/b7.jpg");
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banner3 h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#banner3 h3 {
+  color: #ec544e;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/*displaying the banner boxes in flex and providing space between them
+making the banners display in next line as per the screen width using wrap*/
+#banner3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+
+}
+
+/*here banner-box2 and banner-box3 class is written after the banner-box class due to which 
+other styles are completely same for the this second and third banner but a change is
+their background image*/
+#banner3 .banner-box2 {
+  background-image: url("/img/banner/b4.jpg");
+}
+
+#banner3 .banner-box3 {
+  background-image: url("/img/banner/b18.jpg");
+}
+
+/*displaying the items newstext and form next to each other using flex and wrap
+giving the background-color and aligning the two itenms in center with 
+space in between them*/
+#newsletter {
+  display: flex;
+  background-color: #041e42;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*styling the text in h4 p and span*/
+#newsletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size:14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+#newsletter p span{
+ 
+  color: #ffbd27;
+}
+
+/*in form there is an input and a button so placing them side by side 
+using display flex and giving the width*/
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+
+/*setting the width for the input area giving it a height, font size to the 
+placeholder, border to the input area, and making the top right and bottom left
+radius of the input area 0 for making it compatiable with the button*/
+#newsletter input {
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/*collapsing the top left and bottom left radius of the button to show it 
+convenient and as i wished, and keeping the text inside the button in a single
+line */
+#newsletter button {
+background-color: #088178;
+color: #fff;
+white-space: nowrap;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+/*arranging all the columns inside the footer in one row with space between
+them*/
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*arranging the links in columns in one row*/
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/*styling the logo, texts, icons, and links*/
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 16px;
+ 
+} 
+
+footer .follow {
+  margin-top: 26px;
+}
+ 
+footer .follow i{
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+
+footer .follow h2 {
+  font-size: 18px;
+}
+
+/*placing the two install images inside borders*/
+footer .install .row img {
+
+  border: 1px solid #088178;
+  border-radius: 6px;
+
+}
+
+/*providing margin for payment image*/
+footer .install img {
+
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover
+{
+
+  color: #088178;
+}
+
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+
+/*hiding the hamburger and extra shop icon*/
+#mobile {
+  display: none;
+}
+
+/*hiding the close icon*/
+#close {
+  display: none;
+}
+
+/*shop page*/
+
+#page-header {
+  background-image: url("img/banner/b1.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2,
+#page-header p {
+  color: #fff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/*small product*/
+
+#prodetails.single-pro-img {
+  width: 40%;
+  margin-right: 50px;
+}
+
+/*shop page*/
+
+#page-header {
+  background-image: url("img/banner/b1.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2,
+#page-header p {
+  color: #fff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/*small product*/
+
+#prodetails .single-pro-img {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  cursor: pointer;
+  flex-basis: 24%;
+}
+
+
+#prodetails {
+  display: flex;
+  margin-top: 20px;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+
+#prodetails .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+
+#prodetails .single-pro-details button {
+  color: #fff;
+  background-color: #088178;
+}
+
+
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+
+
+/*blog page*/
+
+#page-header.blog-header {
+  background-image: url("img/banner/b19.jpg");
+}
+
+
+#blog {
+  padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box {
+  display: flex;
+ width: 100%;
+  align-items: center;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+}
+
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details {
+  width: 50%;
+
+}
+
+#blog .blog-details a {
+
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+#blog .blog-details a::after {
+  content: ""; /*while using after and before we must add the content empty like this*/
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+
+#blog .blog-details a:hover {
+  color: #088178;
+}
+
+#blog .blog-details a:hover::after {
+  background-color: #088178;
+}
+
+#blog .blog-box h1 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: -19;
+}
+
+/*about us page*/
+
+/*esari page header ko styles leko ani about-header ma background image matra fereko estari garda space nadikana garna parxa*/
+#page-header.about-header {
+  background-image: url("/img/about/banner.png");
+}
+
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+
+#about-head img {
+  width: 50%;
+  height: auto;
+}
+
+#about-head div {
+  padding-left: 40px;
+
+}
+
+
+#about-app {
+
+  text-align: center;
+}
+
+#about-app .video {
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
+}
+
+#about-app .video video {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/*contact*/
+
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact-details .details {
+  width: 40%;
+}
+
+
+#contact-details .details span {
+  font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2
+{
+
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+
+}
+
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+
+#contact-details .details i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+
+#contact-details .details li p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+#contact-details .map {
+  width: 55%;
+  height: 400px;
+}
+
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*form*/
+
+#form-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  border: 1px solid #e1e1e1;
+  padding: 80px;
+}
+
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+#form-details form span {
+  font-size: 12px;
+}
+
+#form-details form input,
+#form-details form textarea {
+  width:100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+  outline: none;
+}
+
+#form-details form button {
+  background-color: #088178;
+  color: #fff;
+}
+
+#form-details .people div {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+#form-details .people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+#form-details .people div p span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+/*cart*/
+
+#cart table {
+
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+
+#cart table img {
+  width: 70px;
+}
+
+#cart table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+
+#cart table td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+
+#cart table thead {
+  border: 1px solid #e2e9e2;
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td {
+  padding-top: 15px;
+}
+
+#cart table tbody td {
+  font-size:13px;
+}
+
+
+#cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+  padding-bottom: 15px;
+}
+
+#coupon input {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button {
+  background-color: #088178;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+/*responsive*/
+
+/*responsiveness for tablets*/
+@media (max-width:999px) {
+
+  /* changing the padding of the section for tablet view*/
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  /*displaying the links in column starting with the axis, making the position
+  fixed, and arranging it with top0 and removing it from the page in the
+  large screen*/
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0. 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+ /*showing the nav bar when cicking the hamburger menu*/
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+    
+  }
+
+  /*displaying the hamburger menu and shop icon*/
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  /*styling them*/
+  #mobile i {
+    font-size: 24px;
+    color: #1a1a1a;
+    padding-left: 20px;
+  }
+
+  /*displaying and styling the close icon*/
+  #close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+
+  }
+
+  /*removing shopping bag in the tablet screen navlinks*/
+  #lg-bag {
+    display: none;
+  }
+
+  /*decreasing the height as per the view and arranging the 
+  background position of the image*/
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+  /*aligning the contents in center instead of space-between*/
+  #feature {
+    justify-content: center;
+  }
+
+  /*providing the feature cards/boxes a margin between them*/
+  #feature .fe-box {
+      margin: 15px 15px;
+  }
+
+   /*aligning the contents in center instead of space-between*/
+  #product1 .pro-container {
+    justify-content: center;
+  }
+
+
+  /*giving margin to the product cards*/
+  #product1 .pro {
+    margin: 15px;
+  }
+
+  /*decreasing the banner height*/
+  #banner {
+    height: 20vh;
+  }
+
+  /*giving the min width of 100% and decreasing the height of the banner-box*/
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+
+  /*decreasing the padding*/
+  #banner3 {
+    padding: 0 40px ;
+  }
+
+  /*dcreasing the width*/
+  #banner3 .banner-box {
+    width:28%;
+  }
+
+  /*increasing the width*/
+  #newsletter .form {
+    width: 70%;
+  }
+
+  #prodetails .single-pro-details {
+    
+    padding-top: 0px;
+  }
+
+  #prodetails .single-pro-details h4 {
+    padding: 8px 0 20px 0;
+  }
+
+  /*about us*/
+
+  #about-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+
+  #about-head div {
+    padding-left: 0px;
+  }
+
+  #about-app .video {
+    width: 100%;
+   
+  }
+
+  #about-app h1 {
+    font-size: 35px;
+    
+  }
+
+  /*contact*/
+
+  #form-details {
+    margin: 20px;
+    padding: 40px;
+  }
+
+  #form-details form {
+    width: 50%;
+  }
+
+  #form-details .people  {
+  
+    margin-left: 25px;
+  }
+
+  #form-details .people div p {
+    
+    font-size: 10.8px;
+    line-height: 20px;
+  }
+
+  /*cart*/
+
+  #cart {
+    overflow-x: auto;
+  }
+
+  #subtotal {
+    width: 47%;
+    margin-right: 20px;
+    
+    
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsiveness for mobile pohones*/
+@media (max-width:477px) {
+
+  /* changing the padding of the section for mobile view*/
+  .section-p1 {
+    padding: 20px;
+  }
+
+  /*arranging the logo and the hamburger menu & shop icon*/
+  #header {
+    padding: 10px 30px;
+  }
+
+  /*decreasing the padding and changing the background position*/
+  #hero {
+    padding: 0 20px;
+    background-position: 55%;
+  }
+
+  /*decreasing the font-size*/
+  h2 {
+    font-size: 32px;
+  }
+
+  /*decreasing the font-size*/
+  h1 {
+    font-size: 38px;
+  }
+
+  /*decreasing the width and managing the margin*/
+  #feature .fe-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+  }
+
+
+  /*appying space-between instead of center to give some space between
+  the feature cards*/
+  #feature {
+    justify-content: space-between;
+  }
+
+  /*giving the full width to the product cards*/
+  #product1 .pro {
+    width: 100%;
+  }
+
+  /*increasing the banner height to organize all the text inside it*/
+  #banner {
+    height: 40vh;
+  }
+
+   /*increasing the banner height to organize all the text inside it*/
+  #sm-banner .banner-box {
+    height: 40vh;
+  }
+
+  /*giving a space between the banners*/
+  #sm-banner .banner-box2 {
+    margin-top: 20px;
+  }
+
+  /*decreasing the padding*/
+  #banner3 {
+    padding: 0 20px ;
+  }
+ /*giving the full width*/
+  #banner3 .banner-box {
+    width: 100%;
+  }
+
+  /*increasing the width of the form*/
+  #newsletter .form {
+    width: 100%;
+  }
+
+  /*giving proper padding for good view*/
+  #newsletter {
+    padding: 40px 20px;
+  }
+
+ /*displaying the copyright section in center*/
+  footer .copyright p {
+    font-size: 11px;
+
+  }
+
+  /*single product*/
+
+  #prodetails {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #prodetails .single-pro-img {
+    width: 100%;
+    
+  }
+
+  #prodetails .single-pro-details {
+    width: 100%;
+    
+  }
+
+  #prodetails .single-pro-details {
+   
+    padding-top: 10px;
+  }
+
+  #prodetails .single-pro-details h6 {
+    font-size: 15px;
+  }
+
+  #prodetails .single-pro-details h4 {
+    padding: 15px 0 15px 0;
+  }
+
+  #prodetails .single-pro-details h3 {
+    padding-bottom: 12px;
+  }
+
+
+  /*blog page*/
+
+  #blog {
+    padding: 100px 20px 0 20px;
+  }
+
+  #blog .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #blog .blog-img {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  #blog .blog-details {
+    width: 100%;
+  }
+
+  /*contact*/
+
+  #contact-details {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #contact-details .details {
+    width: 100%;
+  }
+
+  #contact-details .map {
+    width: 100%;
+   
+  }
+
+  #form-details {
+
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+
+  #form-details form {
+    width: 100%;
+    margin-bottom: 30px;
+   
+  }
+
+  /*cart*/
+
+  #cart-add {
+    flex-direction: column;
+  }
+  #coupon {
+    width: 100%;
+  }  
+
+  #subtotal {
+    width: 100%;
+    
+  }
+
+  #coupon h3 {
+    text-align: center;
+  }
+
+
+
